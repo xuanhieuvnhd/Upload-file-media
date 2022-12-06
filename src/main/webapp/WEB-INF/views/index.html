@@ -2,19 +2,19 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="layout :: head">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Trang chủ</title>
 </head>
 <body>
 <div>
-    <a th:href="@{/song/save}">Create</a>
+    <a th:href="@{/song/save}">Tạo mới bài hát</a>
 </div>
 <table id="music">
     <thead>
     <tr>
-        <th>#</th>
-        <th>Name</th>
-        <th>Play</th>
-        <th>Category</th>
+        <th>Stt</th>
+        <th>Tên bài hát</th>
+        <th>Nghe nhạc</th>
+        <th>Thể loại</th>
         <th></th>
         <th></th>
     </tr>
@@ -25,14 +25,14 @@
         <td th:text="${musicStat.count}"></td>
         <td th:text="${music.name}"></td>
         <td>
-            <a th:href="@{/song/{id}/view(id=${music.id})}">Play</a>
+            <a th:href="@{/song/{id}/view(id=${music.id})}">Nghe nhạc</a>
         </td>
         <td th:text="${music.category}"></td>
         <td>
-            <a th:href="@{/song/{id}/delete(id=${music.id})}">Delete</a>
+            <a th:href="@{/song/{id}/edit(id=${music.id})}">Sửa</a>
         </td>
         <td>
-            <a th:href="@{/song/{id}/edit(id=${music.id})}">Update Info</a>
+            <a th:href="@{/song/{id}/delete(id=${music.id})}">Xoá</a>
         </td>
     </tr>
     </tbody>

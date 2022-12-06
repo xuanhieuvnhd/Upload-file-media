@@ -53,9 +53,9 @@ public class MusicController {
         ModelAndView modelAndView = new ModelAndView("create");
         modelAndView.addObject("musicForm", musicForm);
         if (musicForm.getId() == null) {
-            modelAndView.addObject("message", "Created new song successfully !");
+            modelAndView.addObject("message", "Tao moi bai hat thanh cong !");
         } else {
-            modelAndView.addObject("message", "Updated song successfully !");
+            modelAndView.addObject("message", "Sua bai hat thanh cong !");
         }
         return modelAndView;
     }
@@ -71,7 +71,7 @@ public class MusicController {
     @GetMapping("/{id}/delete")
     public String deleteMusic(@PathVariable("id") Long id, Model model) {
         musicService.delete(id);
-        model.addAttribute("message", "Delete successfully !");
+        model.addAttribute("message", "Xoa bai hat thanh cong !");
         return "redirect:/song/home";
     }
 

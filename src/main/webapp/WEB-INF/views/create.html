@@ -2,24 +2,24 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Tạo mới bài hát</title>
 </head>
 <body>
 <div>
-    <a th:href="@{/song/home}">Home</a>
+    <a th:href="@{/song/home}">Trang chủ</a>
 </div>
 <form th:action="@{/song/save}" th:object="${musicForm}" method="post" novalidate="novalidate" enctype="multipart/form-data">
     <input type="hidden" th:field="*{id}">
     <div>
-        Name : <input type="text" th:field="*{name}" placeholder="name music">
+        Tên bài hát : <input type="text" th:field="*{name}" placeholder="Tên bài hát">
     </div>
     <div>
-        Category : <input type="text" th:field="*{category}" placeholder="name music">
+        Thể loại: <input type="text" th:field="*{category}" placeholder="Thể loại bài hát">
     </div>
     <div>
-        Link : <input type="file" th:field="*{link}" placeholder="name music">
+        Đường dẫn : <input type="file" th:field="*{link}" placeholder="Đường dẫn">
     </div>
-    <button>Save</button>
+    <button>Lưu lại</button>
 </form>
 <p th:text="${message}"></p>
 </body>

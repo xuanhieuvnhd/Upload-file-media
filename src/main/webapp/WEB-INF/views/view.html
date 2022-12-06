@@ -2,19 +2,19 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Thông tin bài hát</title>
 </head>
 <body>
-<p><a th:href="@{/song/home}">Home</a></p>
+<p><a th:href="@{/song/home}">Trang chủ</a></p>
 <div>
-    <p> Song name :
+    <p> Tên bài hát :
         <span th:text="${music.name}"></span>
     </p>
     <p>
         <audio  th:src="@{'/music/' + ${music.link}}" type="audio/mpeg" controls>
         </audio>
     </p>
-    <p> Song category :
+    <p> Thể loại :
         <span th:text="${music.category}"></span>
     </p>
 </div>
